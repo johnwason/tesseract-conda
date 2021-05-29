@@ -20,21 +20,25 @@ source:
     git_rev: 9502162d5ca110de9a2dc460156c446ec0d6c626
     patches:
       - trajopt_ros_win_fix.patch # [win]
+      - trajopt_ros_linux_fix.patch # [linux]
   - url: https://github.com/ros-industrial-consortium/tesseract/archive/refs/tags/0.4.1.tar.gz
     sha256: 08ada3998904250ca36aa5923331cf2ee3486cb36b1780b3484bb723b520a8cd
     folder: src/tesseract
     patches:
-      - tesseract_win_fix.patch 
+      - tesseract_win_fix.patch # [win]
+      - tesseract_linux_fix.patch # [linux]
   - git_url: https://github.com/johnwason/tesseract_planning.git
     folder: src/tesseract_planning
     git_rev: 84ac87f6ebe891ff1c66195b03d1aa92878f9f84
     patches:
       - tesseract_planning_win_fix.patch # [win]
+      - tesseract_planning_linux_fix.patch # [linux]
   - git_url: https://github.com/johnwason/tesseract_python-1.git
     folder: src/tesseract_python
     git_rev: 8e80f97db33e814e826c241e02160954a7534050
     patches:
       - tesseract_python_win_fix.patch # [win]
+      - tesseract_python_linux_fix.patch # [linux]
 
 requirements:
   host:
@@ -50,7 +54,8 @@ requirements:
     - octomap 
     - orocos-kdl 
     - pcl 
-    - gtest 
+    - gtest
+    - gmock
     - pkg-config 
     - osqp 
     - osqp-eigen 
@@ -78,7 +83,8 @@ requirements:
     - octomap 
     - orocos-kdl 
     - pcl 
-    - gtest 
+    - gtest
+    - gmock
     - pkg-config 
     - osqp 
     - osqp-eigen 
